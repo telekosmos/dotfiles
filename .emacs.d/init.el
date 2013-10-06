@@ -28,6 +28,9 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 
+(setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
+(setq default-tab-width 4)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
