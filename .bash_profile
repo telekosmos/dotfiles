@@ -86,7 +86,7 @@ export PATH=/usr/local/sbin:$PATH
 # less colors via port/brew install source-highlight
 # then:
 export LESSOPEN="| /opt/local/bin/src-hilite-lesspipe.sh %s"
-export LESS = ' -R '
+export LESS=' -R '
 
 export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
@@ -95,6 +95,8 @@ export PATH=$PATH:/Users/telekosmos/Tools/adt-bundle-20131030/sdk/platform-tools
 # AWS
 export EC2_HOME=/Users/telekosmos/DevOps/aws/ec2-api-tools-1.6.12.0
 export PATH=$PATH:$EC2_HOME/bin
+export AWS_ACCESS_KEY=AKIAIC4PN6DAAOFJY3GQ
+export AWS_SECRET_KEY=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
 
 export PYTHONPATH=$PYTHONPATH:/opt/local/bin:/usr/bin
 # export PATH=/usr/local/heroku/bin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
