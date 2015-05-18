@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 d0652eee712d9ac704f8c63febd505bb448b3c42 haleboppp <haleboppp@ubuntu.ubuntu-domain> 1373391626 +0200	clone: from https://github.com/startup-class/dotfiles.git
+d0652eee712d9ac704f8c63febd505bb448b3c42 6cf66a657c00873867fdf22534e2c1990a211689 haleboppp <haleboppp@ubuntu.ubuntu-domain> 1373394165 +0200	commit: Initial commit for customization
+6cf66a657c00873867fdf22534e2c1990a211689 e0dcc7817b40971dca5bd7cbab5139cb4ce647dc telekosmos <telekosmos@ymail.com> 1401265592 +0200	commit: Changes because of issues in JAVA_HOME
+e0dcc7817b40971dca5bd7cbab5139cb4ce647dc a7a33cd7c9068a8c85ee04a237d736fea8b50093 telekosmos <telekosmos@ymail.com> 1422382475 +0100	commit: Added function to choose java version
+a7a33cd7c9068a8c85ee04a237d736fea8b50093 a7a33cd7c9068a8c85ee04a237d736fea8b50093 telekosmos <telekosmos@ymail.com> 1431956210 +0200	checkout: moving from master to aws
+a7a33cd7c9068a8c85ee04a237d736fea8b50093 f56762b35fad9cbd7075e24f1acabf4e79e605c4 telekosmos <telekosmos@ymail.com> 1431956363 +0200	commit: Added colors for less
+f56762b35fad9cbd7075e24f1acabf4e79e605c4 a7a33cd7c9068a8c85ee04a237d736fea8b50093 telekosmos <telekosmos@ymail.com> 1431956373 +0200	checkout: moving from aws to master
+a7a33cd7c9068a8c85ee04a237d736fea8b50093 f862063cc01c8830d0f4a4039d0412dab4b18649 telekosmos <telekosmos@ymail.com> 1431956392 +0200	merge aws: Merge made by the 'recursive' strategy.
+f862063cc01c8830d0f4a4039d0412dab4b18649 d007b92a2f9d677d6c18ad91c221a7e70ec45e0f telekosmos <telekosmos@ymail.com> 1431956488 +0200	commit: Fixed
+d007b92a2f9d677d6c18ad91c221a7e70ec45e0f cfc617fccf9d3f6316cba18644acc6ea84f3d5ca telekosmos <telekosmos@ymail.com> 1431956586 +0200	commit (amend): Fixed
