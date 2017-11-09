@@ -24,5 +24,8 @@ export LSCOLORS=FxFxCxDxBxegedabagaced
 echo '.bashrc loaded!!!'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# for docker images in external hd
+ln -s /Volumes/Backup-Plus\ Slim\ Drive/Docker ~/.docker
+
 export NVM_DIR="/Users/telekosmos/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
