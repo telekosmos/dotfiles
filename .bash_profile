@@ -125,8 +125,6 @@ export PATH=$PATH:/Users/telekosmos/Tools/adt-bundle-20131030/sdk/platform-tools
 # AWS
 # export EC2_HOME=/Users/telekosmos/DevOps/aws/ec2-api-tools-1.6.12.0
 # export PATH=$PATH:$EC2_HOME/bin
-# export AWS_ACCESS_KEY=AKIAIC4PN6DAAOFJY3GQ
-# export AWS_SECRET_KEY=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
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
