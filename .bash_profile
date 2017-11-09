@@ -62,6 +62,8 @@ function setjdk() {
    fi
    export JAVA_HOME=`/usr/libexec/java_home -v $@`
    export PATH=$JAVA_HOME/bin:$PATH
+   echo 'java version set to'
+   echo $JAVA_HOME
   fi
 }
 function removeFromPath() {
@@ -73,6 +75,34 @@ setjdk 1.7
 # export GROOVY_HOME=/usr/share/java/groovy-1.7.0
 export GROOVY_HOME=/usr/share/java/groovy-1.8.6
 export PATH=$GROOVY_HOME/bin:$PATH
+# Tunneling for mongodb-lingbe @dev
+# ssh -f -N -l lingbe -i /Users/telekosmos/.ssh/id_rsa -L 7017:localhost:27017 40.115.3.254
+# mongod --dbpath /data/db/mongodb --port 27072 --logpath /var/log/mongodb/mongod.log
+alias mongostart="sudo mongod -f /opt/local/etc/mongodb/mongod.conf --httpinterface"
+
+mongostop_func () {
+  local mongopid=`less /opt/local/var/db/mongodb/mongod.lock`;
+  if [[ $mongopid =~ [[:digit:]] ]]; then
+      sudo kill -15 $mongopid;
+      echo mongod process $mongopid terminated;
+  else
+      echo mongo process $mongopid not exist;
+  fi
+}
+
+alias mongostop="mongostop_func"
+
+# LANG var 
+export LANG=en_US.UTF-8
+
+# GRADLE thing
+export GRADLE_HOME=/Users/telekosmos/.sdkman/candidates/gradle/current
+
+# export GROOVY_HOME=/usr/share/java/groovy-1.7.0
+# export GROOVY_HOME=/usr/share/java/groovy-1.8.6
+# export PATH=$GROOVY_HOME/bin:$PATH
+source "/Users/telekosmos/.sdkman/bin/sdkman-init.sh"
+
 
 # Configure PATH
 #  - These are line by line so that you can kill one without affecting the others.
@@ -93,9 +123,16 @@ export PATH=$PATH:$MONGO_PATH/bin
 export PATH=$PATH:/Users/telekosmos/Tools/adt-bundle-20131030/sdk/platform-tools:/Users/telekosmos/Tools/adt-bundle-20131030/sdk/tools
 
 # AWS
-export EC2_HOME=/Users/telekosmos/DevOps/aws/ec2-api-tools-1.6.12.0
-export PATH=$PATH:$EC2_HOME/bin
+# export EC2_HOME=/Users/telekosmos/DevOps/aws/ec2-api-tools-1.6.12.0
+# export PATH=$PATH:$EC2_HOME/bin
+# export AWS_ACCESS_KEY=AKIAIC4PN6DAAOFJY3GQ
+# export AWS_SECRET_KEY=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
 
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 export PYTHONPATH=$PYTHONPATH:/opt/local/bin:/usr/bin
 # export PATH=/usr/local/heroku/bin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
 
@@ -123,6 +160,21 @@ export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
 # export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
+alias ungit 'ungit --no-launchBrowser'
 
 echo "JAVA_HOME is $JAVA_HOME"
-echo '.bash_profile ended load!!'
+# echo '.bash_profile ended load!!'
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# MacPorts Installer addition on 2017-01-05_at_13:54:31: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/telekosmos/.sdkman"
+[[ -s "/Users/telekosmos/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/telekosmos/.sdkman/bin/sdkman-init.sh"

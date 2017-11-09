@@ -21,16 +21,11 @@ export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=FxFxCxDxBxegedabagaced
 
-# via easy_install Pygments
-alias pygm='pygmentize -g'
-alias ungit='ungit --no-launchBrowser'
-
 echo '.bashrc loaded!!!'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# for docker images in external hd
+ln -s /Volumes/Backup-Plus\ Slim\ Drive/Docker ~/.docker
+
 export NVM_DIR="/Users/telekosmos/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/telekosmos/.sdkman"
-[[ -s "/Users/telekosmos/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/telekosmos/.sdkman/bin/sdkman-init.sh"
